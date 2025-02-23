@@ -1,8 +1,10 @@
 {{ define "main" }}
   {{ .Content }}
   <p>A paragraph in home.html</p>
+  <div class="index-list">
   {{ range where site.RegularPages "Section" "posts" }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ .Summary }}
   {{ end }}
+  </div>
 {{ end }}
